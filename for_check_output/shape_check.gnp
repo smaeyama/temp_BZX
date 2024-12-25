@@ -1,0 +1,40 @@
+# check shape and right-handed cordinates
+
+
+set title "Shape check"
+
+set size ratio 1
+set xrange [2.5:4.5]
+set yrange [-1:1]
+set xlabel "R [m]"
+set xlabel "Z [m]"
+
+plot "geom/shape_rtz.dat" ind 0 u 5:6 ti "zeta = 0" w l,\
+                       "" ind 0 every :::0::10 u 5:6 noti w l,\
+     "geom/shape_trz.dat" ind 0 every :::5::10 u 5:6 noti w l
+
+ pause 1
+
+plot "geom/shape_rtz.dat" ind 1 u 5:6 ti "zeta = + 1 delta zeta" w l,\
+                       "" ind 1 every :::0::10 u 5:6 noti w l,\
+     "geom/shape_trz.dat" ind 1 every :::5::10 u 5:6 noti w l
+
+ pause 1
+
+plot "geom/shape_rtz.dat" ind 2 u 5:6 ti "zeta = + 2 delta zeta" w l,\
+                       "" ind 2 every :::0::10 u 5:6 noti w l,\
+     "geom/shape_trz.dat" ind 2 every :::5::10 u 5:6 noti w l
+
+ pause 1
+
+plot "geom/shape_rtz.dat" ind 3 u 5:6 ti "zeta = + 3 delta zeta" w l,\
+                       "" ind 3 every :::0::10 u 5:6 noti w l,\
+     "geom/shape_trz.dat" ind 3 every :::5::10 u 5:6 noti w l
+
+ pause 1
+
+plot "geom/shape_rtz.dat" ind 4 u 5:6 ti "zeta = + 4 delta zeta" w l,\
+                       "" ind 4 every :::0::10 u 5:6 noti w l,\
+     "geom/shape_trz.dat" ind 4 every :::5::10 u 5:6 noti w l
+
+ pause -1

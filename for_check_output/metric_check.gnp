@@ -1,0 +1,14 @@
+# check jacobian
+
+
+set title "Consistency check of Jacobian"
+
+set xrange [-1:1]
+set xlabel "z/pi"
+
+plot "check/mag_check.dat" ind 5 every :::0::0 u ($2/pi):12 ti "rootg " w l,\
+                        "" ind 5 every :::0::0 u ($2/pi):10 ti "rootg0" w p,\
+                        "" ind 5 every :::0::0 u ($2/pi):11 ti "rootg1" w p
+
+
+ pause -1
