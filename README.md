@@ -1,5 +1,5 @@
 # BZX
-Working repository for porting Fortran BZX code to Python
+Temporary working repository for porting Fortran BZX code to Python
 
 ### src/ : Minimum source directory
 Run the code.
